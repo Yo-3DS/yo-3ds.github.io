@@ -557,6 +557,16 @@ section { padding: 56px 0; }
 .tag.tag-mint { background: #E4F9F0; color: #1F8F62; }
 .tag.tag-soon { background: var(--bg-soft); color: var(--ink-soft); }
 
+/* Pastille « Disponible ! » à côté de l'étiquette : les marges négatives
+   évitent d'agrandir la ligne, donc les titres restent alignés entre cartes. */
+.badge-available {
+  height: 54px;
+  width: auto;
+  flex-shrink: 0;
+  align-self: flex-start;
+  margin: -22px 0 -6px;
+}
+
 .card-cta {
   margin-top: auto;
   font-family: 'YW Boutons', sans-serif;
@@ -616,7 +626,7 @@ section { padding: 56px 0; }
   top: 0;
   left: 0;
   z-index: 60;
-  width: min(320px, 70vw);
+  width: max-content;
   border-radius: var(--radius-md);
   border: 4px solid var(--card-accent, var(--ink));
   background: var(--surface);
@@ -628,7 +638,62 @@ section { padding: 56px 0; }
   transition: opacity 0.14s ease, transform 0.14s ease;
 }
 .project-preview.is-visible { opacity: 1; transform: scale(1); }
-.project-preview img { width: 100%; height: auto; display: block; }
+.preview-stage { position: relative; overflow: hidden; }
+.preview-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+.preview-slide.is-active { opacity: 1; }
+
+/* Cadre « Aucun aperçu » */
+.preview-empty {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 12px;
+  background: var(--bg-soft);
+  color: var(--ink-soft);
+  font-family: 'YW Sous-textes', sans-serif;
+  font-size: 1.05rem;
+  text-align: center;
+}
+
+/* Barres de progression du diaporama */
+.preview-dots {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  gap: 4px;
+}
+.preview-dots span {
+  flex: 1;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+}
+.preview-dots span::after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 0;
+  background: #fff;
+}
+.preview-dots span.is-done::after { width: 100%; }
+.preview-dots span.is-active::after {
+  animation: preview-fill var(--slide-ms, 1600ms) linear forwards;
+}
+@keyframes preview-fill { from { width: 0; } to { width: 100%; } }
 
 /* ---------- Project page ---------- */
 .project-hero {
