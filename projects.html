@@ -11,7 +11,7 @@
 <link as="font" crossorigin="" href="assets/fonts/base.otf?v=2" rel="preload" type="font/otf"/>
 <link as="font" crossorigin="" href="assets/fonts/sous-textes.otf?v=2" rel="preload" type="font/otf"/>
 <link as="font" crossorigin="" href="assets/fonts/boutons.otf?v=2" rel="preload" type="font/otf"/>
-<link href="assets/style.css?v=6" rel="stylesheet"/>
+<link href="assets/style.css?v=7" rel="stylesheet"/>
 </head>
 <body>
 <header class="site-header">
@@ -48,8 +48,19 @@
 <div class="section-head">
 <p>In my free time, I cannot stay still without thinking "Hey! You're not creating anything! Do something right now!", so I continue the projects below when I'm able to.</p>
 </div>
-<div class="grid">
-<a class="card card-yw4" href="project-yw4.html">
+<div aria-label="Sort projects" class="sort-bar" role="group">
+<span class="sort-label">Sort by:</span>
+<button aria-pressed="true" class="sort-btn" data-sort="rank" type="button">Importance</button>
+<button aria-pressed="false" class="sort-btn" data-sort="name" type="button">Name</button>
+</div>
+<div class="grid" id="project-grid">
+<a class="card card-wibble-wobble" data-rank="1" data-name="YO-KAI WATCH: Wibble Wobble" data-preview="assets/images/previews/wibble-wobble.png" href="https://wibblewobble.de/" rel="noopener" target="_blank">
+<div class="tag-row"><span class="tag tag-blue">Translation</span></div>
+<h3>YO‑KAI WATCH: Wibble Wobble</h3>
+<p>Pop Wib Wobs again, and in French!</p>
+<span class="card-cta">Official Website →</span>
+</a>
+<a class="card card-yw4" data-rank="2" data-name="YO-KAI WATCH 4" data-preview="assets/images/previews/yw4.png" href="project-yw4.html">
 <div class="tag-row">
 <span class="tag tag-blue">Translation</span>
 <!-- autres tags à définir -->
@@ -58,29 +69,35 @@
 <p>YO‑KAI WATCH 4 finally in French!</p>
 <span class="card-cta">See Project →</span>
 </a>
-<a class="card card-pq" href="project-persona-q.html">
+<a class="card card-pq" data-rank="3" data-name="Persona Q" data-preview="assets/images/previews/persona-q.png" href="project-persona-q.html">
 <div class="tag-row"><span class="tag tag-blue">Translation</span></div>
 <h3>Persona Q</h3>
 <p>The Shadows of the labyrinth are still waiting...</p>
 <span class="card-cta">See Project →</span>
 </a>
-<a class="card card-yw1" href="project-yw1-smartphone.html">
-<div class="tag-row"><span class="tag tag-blue">Translation</span></div>
-<h3>YO‑KAI WATCH 1 Smartphone</h3>
-<p>(Re)discover YO‑KAI WATCH 1 in a more accessible way in French!</p>
-<span class="card-cta">See Project →</span>
-</a>
-<a class="card card-blasters-r" href="https://infinvarg.itch.io/blasters-r" rel="noopener" target="_blank">
+<a class="card card-blasters-r" data-rank="4" data-name="Blasters R" data-preview="assets/images/previews/blasters-r.png" href="https://infinvarg.itch.io/blasters-r" rel="noopener" target="_blank">
 <div class="tag-row"><span class="tag tag-blue">Translation</span></div>
 <h3>Blasters R</h3>
 <p>I'm in charge of the native French translation.</p>
 <span class="card-cta">Itch Page →</span>
 </a>
-<a class="card card-projecttimeline" href="https://x.com/YKW_PT" rel="noopener" target="_blank">
+<a class="card card-projecttimeline" data-rank="5" data-name="YW: ProjectTimeline" data-preview="assets/images/previews/projecttimeline.png" href="https://x.com/YKW_PT" rel="noopener" target="_blank">
 <div class="tag-row"><span class="tag tag-blue">Translation</span></div>
 <h3>YW: ProjectTimeline</h3>
 <p>I'm in charge of the native French translation.</p>
 <span class="card-cta">Twitter/X →</span>
+</a>
+<a class="card card-yw1" data-rank="6" data-name="YO-KAI WATCH 1 Smartphone" data-preview="assets/images/previews/yw1-smartphone.png" href="project-yw1-smartphone.html">
+<div class="tag-row"><span class="tag tag-blue">Translation</span></div>
+<h3>YO‑KAI WATCH 1 Smartphone</h3>
+<p>(Re)discover YO‑KAI WATCH 1 in a more accessible way in French!</p>
+<span class="card-cta">See Project →</span>
+</a>
+<a class="card card-spritoglobin" data-rank="7" data-name="Spritoglobin DX" data-preview="assets/images/previews/spritoglobin-dx.png" href="https://github.com/MnL-Modding/Spritoglobin-DX" rel="noopener" target="_blank">
+<div class="tag-row"><span class="tag tag-blue">Translation</span></div>
+<h3>Spritoglobin DX</h3>
+<p>I'm in charge of the native French translation.</p>
+<span class="card-cta">GitHub →</span>
 </a>
 </div>
 </section>
@@ -93,5 +110,6 @@
 <script defer="" src="assets/nav.js?v=1"></script>
 <script defer="" src="assets/theme.js?v=2"></script>
 <script defer="" src="assets/music.js?v=2"></script>
+<script defer="" src="assets/projects.js?v=1"></script>
 </body>
 </html>
