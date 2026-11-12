@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<script>try{document.documentElement.setAttribute("data-theme", localStorage.getItem("theme")||"light");}catch(e){}</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Home - Yo-3DS Website</title>
+<link href="/assets/images/brand/favicon.png?v=1" rel="icon" type="image/png"/>
+<link as="font" crossorigin="" href="/assets/fonts/titres.otf?v=2" rel="preload" type="font/otf"/>
+<link as="font" crossorigin="" href="/assets/fonts/base.otf?v=2" rel="preload" type="font/otf"/>
+<link as="font" crossorigin="" href="/assets/fonts/sous-textes.otf?v=2" rel="preload" type="font/otf"/>
+<link as="font" crossorigin="" href="/assets/fonts/boutons.otf?v=2" rel="preload" type="font/otf"/>
+<link href="/assets/style.css?v=6" rel="stylesheet"/>
+</head>
+<body>
+<header class="site-header">
+<nav class="nav">
+<a class="brand" href="/home/">
+<img alt="" class="brand-icon" src="/assets/images/brand/icon.png"/>
+<span class="brand-name"><span class="brand-yo">Yo-</span><span class="brand-3ds">3DS</span> Website</span>
+</a>
+<button aria-controls="nav-collapse" aria-expanded="false" aria-label="Menu" class="nav-toggle" type="button"><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span></button>
+<div class="nav-collapse" id="nav-collapse">
+<ul class="nav-links">
+<li><a aria-current="page" href="/home/">Home</a></li>
+<li><a href="/projects/">Projects</a></li>
+<li><a href="/contact/">Contact</a></li>
+</ul>
+<details class="lang-switch">
+<summary><img alt="" class="flag" src="/assets/images/flags/en.png"/>English</summary>
+<ul class="lang-menu">
+<li><a class="active" href="/home/"><img alt="" class="flag" src="/assets/images/flags/en.png"/>English</a></li>
+<li><a href="/fr/accueil/"><img alt="" class="flag" src="/assets/images/flags/fr.png"/>Français</a></li>
+</ul>
+</details>
+<button class="theme-toggle" type="button">Dark Mode</button>
+<button aria-pressed="false" class="music-toggle" title="Flower Man (sung by Yo-3DS)" type="button"><span aria-hidden="true" class="music-icon"></span><span class="music-label">Music</span></button>
+</div>
+<audio id="site-audio" loop="" preload="none">
+<source src="/assets/audio/flower-man.mp3?v=1" type="audio/mpeg"/>
+<source src="/assets/audio/flower-man.ogg?v=1" type="audio/ogg"/>
+</audio>
+</nav>
+</header>
+<main class="wrap">
+<section class="hero" style="grid-template-columns: 1fr;">
+<div>
+<h1>Hi, I'm Yo‑3DS!</h1>
+<p>
+        I'm a great YO‑KAI WATCH fan, and a great french localizations fan too! I such
+        like these that I decided to create some myself, especially for games that
+        would never get one.
+      </p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="/projects">See my projects</a>
+</div>
+</div>
+</section>
+<section id="a-propos">
+<!-- section "à propos" retirée pour l'instant -->
+</section>
+</main>
+<footer class="site-footer">
+<div class="wrap footer-row">
+<small>© 2026 — <span class="brand-yo">Yo-</span><span class="brand-3ds">3DS</span> Website</small>
+</div>
+</footer>
+<script defer="" src="/assets/nav.js?v=1"></script>
+<script defer="" src="/assets/theme.js?v=2"></script>
+<script defer="" src="/assets/music.js?v=2"></script>
+</body>
+</html>
